@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Flow Stage Indicator</masterLabel>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen" configurationEditor="c-flow-stage-indicator-cpe">
+            <property name="stageListString" label="List of Stages as a string" description="Enter list of stages as a comma-separated string (e.g. Intro, Details, Review)" type="String" role="inputOnly"/>
+            <property name="stages" label="List of Stages" description="Enter list of stages as a collection variable" type="String[]" role="inputOnly"/>
+            <property name="currentStage" label="Active Stage" description="Enter the active stage. Needs to be one of the stages listed above." type="String" required="true" role="inputOnly"/>
+            <property name="clickedStage" label="Clicked Stage" description="If the user clicks a different stage, this returns the name of the stage they clicked" type="String" role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

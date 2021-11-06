@@ -1,0 +1,10 @@
+<template>
+    Hello there!
+    {screen.name} - {screen.label}
+    <c-fsc_flow-button-bar label="Select Input Type" help-text="Choose between a string containing a comma-separated list of values, or a collection variable containing a list of the strings" options={stageListInputTypeOptions}></c-fsc_flow-button-bar>
+    <template for:each={screen.fields} for:item="field">
+        <div key={field.name}>
+            
+        </div>
+    </template>
+</template>
